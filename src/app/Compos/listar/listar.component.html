@@ -1,0 +1,14 @@
+<div class="container">
+    <div *ngFor="let persona of personas" class="row">
+        <div class="col"><h5>Nombre</h5><p>{{persona.nombre}} </p></div>
+        <div class="col"><h5>CUIT / CUIL</h5><p>{{persona.cuit}} </p></div>
+        <div class="col"><h5>contacto</h5> <p>{{persona.contacto}} </p> </div>
+        <div class="col"><h5>CBU</h5><p>{{persona.cbu}} </p> </div>
+        <div>
+            <button (click)="Editar(persona)" class="btn btn-warning editar"><i
+                    class="fas fa-edit"></i></button>
+            <button (click)="Delete(persona)" class="btn btn-warning borrar"><i
+                    class="fas fa-trash"></i></button>
+        </div>
+    </div>
+</div>  
