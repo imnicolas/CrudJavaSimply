@@ -10,6 +10,13 @@ import { ListarComponent } from './Compos/listar/listar.component';
 import { ServicioService } from './Servicio/servicio.service';
 import { MainComponent } from './Compos/main/main.component'
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { interceptorProvider } from './interceptors/persona-interceptor.service';
+import { AuthService } from './Servicio/auth.service';
+import { TokenService } from './Servicio/token.service';
+import { LoginComponent } from './Compos/login/login.component';
+import { RegistroComponent } from './Compos/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -17,15 +24,19 @@ import { HttpClientModule } from '@angular/common/http';
     AddComponent,
     EditComponent,
     ListarComponent,
-    MainComponent
+    MainComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
-  providers: [ServicioService],
+  providers: [ServicioService,AuthService,TokenService,interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
