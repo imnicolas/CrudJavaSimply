@@ -14,21 +14,21 @@ export class ServicioService {
   URL='https://gassye.herokuapp.com/personas';
 
   getPersona(){
-    return this.http.get<Persona[]>(this.Url+'/traer');
+    return this.http.get<Persona[]>(this.URL+'/traer');
   }
 
   createPersona(persona:Persona){
-    return this.http.post<Persona>(this.Url+'/crear',persona);
+    return this.http.post<Persona>(this.URL+'/crear',persona);
   }
 
   getPersonaId(id:number){
-    return this.http.get<Persona>(this.Url+"/"+id);
+    return this.http.get<Persona>(this.URL+"/"+id);
   }
   updatePersona(persona:Persona){
-    return this.http.put<Persona>(this.Url+"/editar/"+persona.id,persona);
+    return this.http.put<Persona>(this.URL+"/editar/"+persona.id,persona);
   }
   deletePersona(persona:Persona){
-    return this.http.delete<Persona>(this.Url+"/borrar/"+persona.id);
+    return this.http.delete<Persona>(this.URL+"/borrar/"+persona.id);
   }
   
 }

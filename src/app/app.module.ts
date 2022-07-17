@@ -17,6 +17,7 @@ import { AuthService } from './Servicio/auth.service';
 import { TokenService } from './Servicio/token.service';
 import { LoginComponent } from './Compos/login/login.component';
 import { RegistroComponent } from './Compos/registro/registro.component';
+import { SelectoresComponent } from './Compos/selectores/selectores.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RegistroComponent } from './Compos/registro/registro.component';
     ListarComponent,
     MainComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    SelectoresComponent
   ],
   imports: [
     BrowserModule,
